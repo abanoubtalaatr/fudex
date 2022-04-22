@@ -31,8 +31,18 @@ class CartController extends Controller
      */
     public function store(CartRequest $request): SuccessResponse
     {
-        Cart::create($request->validated());
+        $itemExistBefore = Cart::where('item_id', $request->input('item_id'))->first();
 
+        if(is_null($itemExistBefore)) {
+            Cart::create($request->validated());
+            return new SuccessResponse();
+        }
+
+        $oldQuantity = $itemExistBefore->quanity;
+
+        $itemExistBefore->update([
+           'quantity' => $oldQuantity + $request->input('quantity')
+        ]);
         return new SuccessResponse();
     }
 
