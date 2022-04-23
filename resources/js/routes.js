@@ -3,6 +3,8 @@ import Item from "./components/Item";
 import Items from "./components/Items";
 import Shop from './components/Shop';
 import Checkout from "./components/Checkout";
+import Orders from "./components/Orders";
+import PaymentDone from "./components/PaymentDone";
 
 const routeInfos = [
     {
@@ -24,6 +26,16 @@ const routeInfos = [
         path : "/checkout",
         name: 'checkout',
         component : Checkout
+    },
+    {
+        path : "/orders",
+        name: 'orders',
+        component : Orders
+    },
+    {
+        path : "/payment-done",
+        name: 'payment',
+        component : PaymentDone
     },
 
 

@@ -21,7 +21,7 @@ class OrderRequest extends FormRequest
             ],
             'total' => [
                 'required',
-                'float',
+                'int',
             ],
             'address' => [
               'string',

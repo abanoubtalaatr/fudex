@@ -20,7 +20,7 @@ class ItemController extends Controller
      */
     public function index(Request $request): AnonymousResourceCollection
     {
-        return ItemResource::collection(Item::paginate(12));
+        return ItemResource::collection(Item::all());
     }
 
     /**

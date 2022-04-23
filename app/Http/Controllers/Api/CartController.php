@@ -38,11 +38,12 @@ class CartController extends Controller
             return new SuccessResponse();
         }
 
-        $oldQuantity = $itemExistBefore->quanity;
+        $quantity = $itemExistBefore->quantity + $request->input('quantity');
 
         $itemExistBefore->update([
-           'quantity' => $oldQuantity + $request->input('quantity')
+            'quantity' => $quantity
         ]);
+
         return new SuccessResponse();
     }
 

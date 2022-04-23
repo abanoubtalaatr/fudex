@@ -1,8 +1,8 @@
 <template>
     <MyHeader></MyHeader>
-    <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 gap-5">
+    <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 gap-5 mb-4">
         <div v-for="item in items" class="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden">
-            <div class="px-4 py-2">
+            <div class="px-4 py-2 h-24">
                 <h1 class="text-gray-900 font-bold text-3xl uppercase">{{ item.name }}</h1>
                 <p class="text-gray-600 text-sm mt-1">{{ item.description }}</p>
             </div>

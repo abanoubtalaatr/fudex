@@ -5,11 +5,5 @@
 </template>
 
 <script>
-import MyHeader from "./components/MyHeader";
-import Items from "./components/Items";
-import Footer from "./components/Footer";
-
-export default {
-
-}
+export default {}
 </script>
