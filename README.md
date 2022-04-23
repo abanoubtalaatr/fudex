@@ -1,6 +1,7 @@
 
 ## Install project
 
+- git clone https://github.com/abanoubtalaatr/fudex.git
 - composer install
 - cp .env.example .env
 - php artisan key:generate
